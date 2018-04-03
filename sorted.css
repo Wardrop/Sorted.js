@@ -2,7 +2,7 @@
   position: relative;
   user-select: none;
 }
-.sorted-js table[data-sorted] th[data-sort-state=sorted]:after {
+.sorted-js[data-sorted] th[data-sort-state=sorted]:after {
   display: inline-block;
   content: "";
   background: no-repeat center center url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.02 19.31"><polygon fill="#000" points="46.02 19.31 23.01 0 0 19.31 12 19.31 23.01 10.07 34.02 19.31 46.02 19.31"/></svg>');
@@ -11,7 +11,7 @@
   height: 10px;
   margin-left: 0.5em;
 }
-.sorted-js table[data-sorted] th[data-sort-state=rsorted]:after {
+.sorted-js[data-sorted] th[data-sort-state=rsorted]:after {
   display: inline-block;
   content: "";
   background: no-repeat center center url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.02 19.31"><polygon fill="#000" points="46.02 0 23.01 19.31 0 0 12 0 23.01 9.24 34.02 0 46.02 0"/></svg>');

@@ -4,7 +4,8 @@ var Sorted = function (table, opts = {}) {
 
   this.init = function () {
     if (table.sorted) table.sorted.unbindEventListeners();
-    table.sorted = this;
+    table.sorted = this
+    table.classList += 'sorted-js'
     this.bindEventListeners()
   }
 
