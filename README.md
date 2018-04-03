@@ -51,9 +51,9 @@ Sorted.js will guess an appropriate sort function based on the first value for e
 If the values in the table cells aren't appropriate for sorting, you can define an alternate sorting value by setting the `data-sort-value` attribute on the table cell.
 
 ``` html
-<td data-sort-state="200">Two-hundred</td>
-<td data-sort-state="11">Eleven</td>
-<td data-sort-state="3000">Three-thousand</td>
+<td data-sort-value="200">Two-hundred</td>
+<td data-sort-value="11">Eleven</td>
+<td data-sort-value="3000">Three-thousand</td>
 ```
 
 
