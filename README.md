@@ -4,7 +4,7 @@ It's designed to gracefully handle any changes made to the table it's bound to, 
 
 ## Getting started
 Include `sorted.js` somewhere in your page:
-``` javascript
+``` html
 <script type="text/javascript" src="sorted.js"></script>
 ```
 
@@ -34,7 +34,7 @@ And finally, be sure to add come CSS to provide some visual feedback, or use the
 ### Exclude columns as sortable
 To exclude a column from being sortable, add the `data-no-sort` attribute to the column header.
 
-``` javascript
+``` html
 <th data-no-sort>Comments</th>
 ```
 
