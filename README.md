@@ -94,10 +94,6 @@ new Sorted(myTable)
 myTable.sorted.sort(1) // Sorts the second column
 ```
 
-```javascript
-var sorted = new Sorted(document.getElementById("mytable"))
-```
-
 ### Lock rows to the top or the bottom
 The best way to keep certain rows at the top or bottom of your table, is to use semantic HTML. Anything you want to stay at the top should be put in <thead>, and anything you want to stay at the bottom of your table should be placed in <tfoot>. Sorted.js only sorts rows within <tbody>.
 
