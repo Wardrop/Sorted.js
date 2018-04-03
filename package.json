@@ -1,0 +1,11 @@
+{
+  "name": "Sorted.js",
+  "version": "1.0.0",
+  "description": "Clean and simple <table> sorting library",
+  "repository": "https://github.com/wardrop/Sorted.js",
+  "author": "Tom Wardrop",
+  "license": "MIT",
+  "main": "sorted.js",
+  "style": "sorted.css",
+  "files": ["sorted.js", "sorted.css"]
+}
