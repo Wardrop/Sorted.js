@@ -24,7 +24,7 @@ var Sorted = function (table, opts) {
     while (th && th.nodeName != 'TH') { th = th.parentElement }
     if (th && th.dataset.noSort == undefined) {
       // Ensure resize handle hasn't been clicked
-      if ((e.screenX - th.getBoundingClientRect().left) < (th.offsetWidth - (opts.resizeHandleWidth / 2))) {
+      if (th.dataset.resizable == undefined || (e.pageX - th.getBoundingClientRect().left) < (th.offsetWidth - (opts.resizeHandleWidth / 2))) {
         var columnIndex = Array.prototype.indexOf.call(th.parentElement.cells, th)
         sorted.sort(columnIndex, th.dataset.sortState == 'sorted')
       }
@@ -35,7 +35,7 @@ var Sorted = function (table, opts) {
     var th = e.target;
     if (th && th.nodeName == 'TH' && th.dataset.resizable != undefined) {
       // Check if the resize handle has been grabbed.
-      if ((e.screenX - th.getBoundingClientRect().left) >= (th.offsetWidth - (opts.resizeHandleWidth / 2))) {
+      if ((e.pageX - th.getBoundingClientRect().left) >= (th.offsetWidth - (opts.resizeHandleWidth / 2))) {
         var dragStartPosition = e.clientX
         var columnStartingWidth = parseInt(window.getComputedStyle(th).width)
 
