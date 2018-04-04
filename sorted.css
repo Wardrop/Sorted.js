@@ -1,5 +1,6 @@
 .sorted-js th {
   position: relative;
+  cursor: default;
   user-select: none;
 }
 .sorted-js[data-sorted] th[data-sort-state=sorted]:after {

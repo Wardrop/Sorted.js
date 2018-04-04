@@ -1,11 +1,12 @@
-var Sorted = function (table, opts = {}) {
+var Sorted = function (table, opts) {
+  opts = opts || {}
   opts.resizeHandleWidth = opts.resizeHandleWidth || 4
   var sorted = this;
 
   this.init = function () {
     if (table.sorted) table.sorted.unbindEventListeners();
     table.sorted = this
-    table.classList += 'sorted-js'
+    table.classList.add('sorted-js')
     this.bindEventListeners()
   }
 
@@ -23,7 +24,7 @@ var Sorted = function (table, opts = {}) {
     while (th && th.nodeName != 'TH') { th = th.parentElement }
     if (th && th.dataset.noSort == undefined) {
       // Ensure resize handle hasn't been clicked
-      if ((e.screenX - th.getBoundingClientRect().x) < (th.offsetWidth - (opts.resizeHandleWidth / 2))) {
+      if ((e.screenX - th.getBoundingClientRect().left) < (th.offsetWidth - (opts.resizeHandleWidth / 2))) {
         var columnIndex = Array.prototype.indexOf.call(th.parentElement.cells, th)
         sorted.sort(columnIndex, th.dataset.sortState == 'sorted')
       }
@@ -34,8 +35,7 @@ var Sorted = function (table, opts = {}) {
     var th = e.target;
     if (th && th.nodeName == 'TH' && th.dataset.resizable != undefined) {
       // Check if the resize handle has been grabbed.
-      if ((e.screenX - th.getBoundingClientRect().x) >= (th.offsetWidth - (opts.resizeHandleWidth / 2))) {
-
+      if ((e.screenX - th.getBoundingClientRect().left) >= (th.offsetWidth - (opts.resizeHandleWidth / 2))) {
         var dragStartPosition = e.clientX
         var columnStartingWidth = parseInt(window.getComputedStyle(th).width)
 

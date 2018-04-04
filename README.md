@@ -1,4 +1,4 @@
-Sorted.js is a replacement for the popular and not-so-loved-anymore Sorttable.js. It's only purpose is to make sorting HTML tables as simple and easy as possible, with the bonus of also allowing specificed columns to be resized.
+Sorted.js is a replacement for the popular but dated Sorttable.js. It's only purpose is to make sorting HTML tables as simple and easy as possible, with the bonus of also allowing specificed columns to be resized.
 
 It's designed to gracefully handle any changes made to the table it's bound to, e.g. adding or removing columns and rows, changing values.
 
@@ -21,13 +21,15 @@ And finally, be sure to add come CSS to provide some visual feedback, or use the
 ```
 
 ## Features
-
 * Designed to handle dynamic changes to table columns, rows and cells.
 * No dependencies
 * No hardcoded CSS
 * No DOM injection.
 * Sorts tables with multiple <tbody> elements, sorting each as it's own independent collection.
 * Column resize capability
+
+## Compatibility
+Sorted.js works on all modern browsers. IE11 is also supported, though the included CSS doesn't work too well with IE11.
 
 ## How To...
 
